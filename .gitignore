@@ -1,0 +1,7 @@
+venv/
+.env
+__pycache__/
+logic/
+*.pem
+test.py
+db.sqlite3
