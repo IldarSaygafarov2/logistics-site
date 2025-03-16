@@ -11,7 +11,3 @@ def render_contact_page(request):
 
 def render_about_page(request):
     return render(request, "app/about.html")
-
-
-def render_services_page(request):
-    return render(request, "app/services.html")

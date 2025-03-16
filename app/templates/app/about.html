@@ -9,19 +9,24 @@ About
 {% block content %}
 
 {% static 'assets/img/page-title-bg.jpg' as banner_image %}
-<div class="page-title dark-background" data-aos="fade" style="background-image: url({{banner_image}});">
+<div class="page-title dark-background" data-aos="fade" style="background-image: url({{ banner_image }});">
     <div class="container position-relative">
-        <h1>About</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam
-            molestias.</p>
+        <h1>О нас</h1>
+        <p>Мы — команда профессионалов, стремящихся предложить высококачественные логистические услуги, ориентированные
+            на потребности каждого клиента. Наши решения помогают бизнесу работать эффективнее, экономить время и
+            ресурсы.
+            Наша цель — сделать вашу работу проще и более продуктивной, предоставляя комплексное обслуживание и
+            поддержку
+            на всех этапах.</p>
         <nav class="breadcrumbs">
             <ol>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li class="current">About</li>
+                <li><a href="index.html">Главная</a></li>
+                <li class="current">О нас</li>
             </ol>
         </nav>
     </div>
 </div>
+
 
 <section id="about" class="about section">
 
@@ -35,36 +40,40 @@ About
                 <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
             </div>
 
-            <div class="col-lg-6 content order-last  order-lg-first" data-aos="fade-up" data-aos-delay="100">
-                <h3>About Us</h3>
+            <div class="col-lg-6 content order-last order-lg-first" data-aos="fade-up" data-aos-delay="100">
+                <h3>О нас</h3>
                 <p>
-                    Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit
-                    quia
-                    molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis
-                    veritatis asperiores placeat.
+                    Наша компания — это лидер в области логистических услуг, предлагающий инновационные и эффективные
+                    решения
+                    для вашего бизнеса. Мы обеспечиваем надежность, скорость и безопасность на всех этапах логистической
+                    цепочки. Мы работаем, чтобы сэкономить ваше время и ресурсы, предоставляя только лучшие сервисы.
                 </p>
                 <ul>
                     <li>
                         <i class="bi bi-diagram-3"></i>
                         <div>
-                            <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                            <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+                            <h5>Индивидуальные решения под ваш бизнес</h5>
+                            <p>Мы предлагаем комплексные логистические услуги, которые могут быть адаптированы под
+                                конкретные
+                                потребности вашего бизнеса, обеспечивая оптимизацию процессов и снижение затрат.</p>
                         </div>
                     </li>
                     <li>
                         <i class="bi bi-fullscreen-exit"></i>
                         <div>
-                            <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                            <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi
-                            </p>
+                            <h5>Гибкость и надежность</h5>
+                            <p>Мы гарантируем высокую степень гибкости в решении любых логистических задач, гарантируя
+                                при этом
+                                максимальную надежность и точность на всех этапах доставки.</p>
                         </div>
                     </li>
                     <li>
                         <i class="bi bi-broadcast"></i>
                         <div>
-                            <h5>Voluptatem et qui exercitationem</h5>
-                            <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam
-                            </p>
+                            <h5>Современные технологии для вашего комфорта</h5>
+                            <p>Мы используем передовые технологии для управления грузами, что позволяет вам отслеживать
+                                и
+                                управлять доставкой в реальном времени, обеспечивая полный контроль над процессом.</p>
                         </div>
                     </li>
                 </ul>
@@ -74,7 +83,7 @@ About
 
     </div>
 
-</section><!-- /About Section -->
+</section>
 
 <!-- Stats Section -->
 <section id="stats" class="stats section">
@@ -87,7 +96,9 @@ About
                 <div class="stats-item text-center w-100 h-100">
                     <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
                         class="purecounter"></span>
-                    <p>Clients</p>
+                    <p>Клиенты</p>
+                    <p>Мы гордимся доверием более чем 200 клиентами по всему миру, которые выбирают нас за надежность и
+                        качество услуг.</p>
                 </div>
             </div><!-- End Stats Item -->
 
@@ -95,7 +106,9 @@ About
                 <div class="stats-item text-center w-100 h-100">
                     <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
                         class="purecounter"></span>
-                    <p>Projects</p>
+                    <p>Проекты</p>
+                    <p>С нами успешно реализовано более 500 проектов в различных отраслях, от логистики до технологий.
+                    </p>
                 </div>
             </div><!-- End Stats Item -->
 
@@ -103,7 +116,9 @@ About
                 <div class="stats-item text-center w-100 h-100">
                     <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
                         class="purecounter"></span>
-                    <p>Hours Of Support</p>
+                    <p>Часы поддержки</p>
+                    <p>Мы предоставляем круглосуточную техническую поддержку, обеспечив более 1400 часов помощи нашим
+                        клиентам.</p>
                 </div>
             </div><!-- End Stats Item -->
 
@@ -111,7 +126,10 @@ About
                 <div class="stats-item text-center w-100 h-100">
                     <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
                         class="purecounter"></span>
-                    <p>Workers</p>
+                    <p>Сотрудники</p>
+                    <p>В нашей команде более 30 высококвалифицированных специалистов, готовых решать задачи любой
+                        сложности.
+                    </p>
                 </div>
             </div><!-- End Stats Item -->
 
@@ -120,87 +138,6 @@ About
     </div>
 
 </section><!-- /Stats Section -->
-
-<!-- Team Section -->
-<section id="team" class="team section">
-
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-        <span>Our Team<br></span>
-        <h2>Our Team</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-    </div><!-- End Section Title -->
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="member">
-                    <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
-                    <div class="member-content">
-                        <h4>Walter White</h4>
-                        <span>Web Development</span>
-                        <p>
-                            Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat
-                            qui aut
-                            aut aut
-                        </p>
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter-x"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Team Member -->
-
-            <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-                <div class="member">
-                    <img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
-                    <div class="member-content">
-                        <h4>Sarah Jhinson</h4>
-                        <span>Marketing</span>
-                        <p>
-                            Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum
-                            temporibus
-                        </p>
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter-x"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Team Member -->
-
-            <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-                <div class="member">
-                    <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
-                    <div class="member-content">
-                        <h4>William Anderson</h4>
-                        <span>Content</span>
-                        <p>
-                            Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro
-                            des clara
-                        </p>
-                        <div class="social">
-                            <a href=""><i class="bi bi-twitter-x"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End Team Member -->
-
-        </div>
-
-    </div>
-
-</section><!-- /Team Section -->
 
 <!-- Testimonials Section -->
 <section id="testimonials" class="testimonials section dark-background">
@@ -232,7 +169,7 @@ About
                         <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img"
                             alt="">
                         <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
+                        <h4>CEO &amp; Founder</h4>
                         <div class="stars">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -240,10 +177,10 @@ About
                         </div>
                         <p>
                             <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                rhoncus.
-                                Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                                semper.</span>
+                            <span>Работа с этой компанией — это настоящее удовольствие! Мы всегда можем рассчитывать на
+                                качественные услуги и высокий уровень профессионализма. Они всегда идут на встречу и
+                                решают все
+                                вопросы быстро и без лишних сложностей.</span>
                             <i class="bi bi-quote quote-icon-right"></i>
                         </p>
                     </div>
@@ -262,10 +199,11 @@ About
                         </div>
                         <p>
                             <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                cillum eram
-                                malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim
-                                culpa.</span>
+                            <span>Сотрудничество с этой командой — это был невероятно успешный опыт. Они всегда отвечают
+                                на
+                                запросы в кратчайшие сроки и предлагают лучшие решения. Мы с ними работаем над
+                                несколькими
+                                проектами, и всегда уверены в отличном результате!</span>
                             <i class="bi bi-quote quote-icon-right"></i>
                         </p>
                     </div>
@@ -273,8 +211,7 @@ About
 
                 <div class="swiper-slide">
                     <div class="testimonial-item">
-                        <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img"
-                            alt="">
+                        <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                         <h3>Jena Karlis</h3>
                         <h4>Store Owner</h4>
                         <div class="stars">
@@ -284,9 +221,11 @@ About
                         </div>
                         <p>
                             <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
-                                duis
-                                minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                            <span>Я очень доволен результатом работы этой команды! Все задачи были решены на высшем
+                                уровне, и
+                                проект был завершен вовремя. Рекомендую их всем, кто ищет надежных партнеров для
+                                долгосрочного
+                                сотрудничества.</span>
                             <i class="bi bi-quote quote-icon-right"></i>
                         </p>
                     </div>
@@ -294,7 +233,7 @@ About
 
                 <div class="swiper-slide">
                     <div class="testimonial-item">
-                        <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img"
+                        <img src="{% static 'assets/img/testimonials/testimonials-4.jpgs' %}" class="testimonial-img"
                             alt="">
                         <h3>Matt Brandon</h3>
                         <h4>Freelancer</h4>
@@ -305,11 +244,10 @@ About
                         </div>
                         <p>
                             <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
-                                minim
-                                velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore
-                                illum
-                                veniam.</span>
+                            <span>Эта компания превзошла все мои ожидания! Превосходное качество обслуживания,
+                                своевременные
+                                ответы и внимание к деталям. Теперь я точно знаю, что могу полагаться на них для своих
+                                проектов!</span>
                             <i class="bi bi-quote quote-icon-right"></i>
                         </p>
                     </div>
@@ -317,8 +255,7 @@ About
 
                 <div class="swiper-slide">
                     <div class="testimonial-item">
-                        <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img"
-                            alt="">
+                        <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                         <h3>John Larson</h3>
                         <h4>Entrepreneur</h4>
                         <div class="stars">
@@ -328,11 +265,11 @@ About
                         </div>
                         <p>
                             <i class="bi bi-quote quote-icon-left"></i>
-                            <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                veniam enim
-                                culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi
-                                cillum
-                                quid.</span>
+                            <span>С каждым проектом я убеждаюсь в их профессионализме и надежности. Они всегда готовы
+                                предложить
+                                свежие идеи и решения, которые приводят к отличным результатам. Это партнерство, которым
+                                я
+                                горжусь!</span>
                             <i class="bi bi-quote quote-icon-right"></i>
                         </p>
                     </div>
@@ -346,14 +283,15 @@ About
 
 </section><!-- /Testimonials Section -->
 
+
 <!-- Faq Section -->
 <section id="faq" class="faq section">
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-        <span>Frequently Asked Questions</span>
-        <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span>Часто задаваемые вопросы</span>
+        <h2>Часто задаваемые вопросы</h2>
+        <p>Ответы на самые популярные вопросы о наших логистических услугах</p>
     </div><!-- End Section Title -->
 
     <div class="container">
@@ -366,74 +304,77 @@ About
 
                     <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
                         <i class="faq-icon bi bi-question-circle"></i>
-                        <h3>Non consectetur a erat nam at lectus urna duis?</h3>
+                        <h3>Какие услуги вы предоставляете?</h3>
                         <div class="faq-content">
-                            <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
-                                curabitur
-                                gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                            <p>Мы предоставляем широкий спектр услуг, включая разработку индивидуальных решений,
+                                консалтинг, а
+                                также поддержку и сопровождение на всех этапах проекта. Наша команда всегда готова
+                                предложить
+                                оптимальные решения, чтобы удовлетворить потребности вашего бизнеса.</p>
                         </div>
                         <i class="faq-toggle bi bi-chevron-right"></i>
                     </div><!-- End Faq item-->
 
                     <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                         <i class="faq-icon bi bi-question-circle"></i>
-                        <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
+                        <h3>Как долго длится процесс реализации проекта?</h3>
                         <div class="faq-content">
-                            <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit
-                                laoreet
-                                id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est
-                                pellentesque
-                                elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                            </p>
+                            <p>Сроки зависят от сложности и масштаба проекта. Мы всегда предоставляем реалистичный
+                                график и
+                                работаем над тем, чтобы выполнить проект вовремя. На каждом этапе мы информируем наших
+                                клиентов о
+                                прогрессе и при необходимости корректируем план работы.</p>
                         </div>
                         <i class="faq-toggle bi bi-chevron-right"></i>
                     </div><!-- End Faq item-->
 
                     <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                         <i class="faq-icon bi bi-question-circle"></i>
-                        <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
+                        <h3>Какую поддержку вы предоставляете после завершения проекта?</h3>
                         <div class="faq-content">
-                            <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
-                                pulvinar
-                                elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                                pellentesque
-                                eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu
-                                facilisis
-                                sed odio morbi quis</p>
+                            <p>Мы всегда на связи с нашими клиентами и предоставляем постпроектную поддержку. Независимо
+                                от того,
+                                требуется ли обучение, техническое обслуживание или консультации, наша команда готова
+                                помочь в любой
+                                момент после завершения проекта.</p>
                         </div>
                         <i class="faq-toggle bi bi-chevron-right"></i>
                     </div><!-- End Faq item-->
 
                     <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
                         <i class="faq-icon bi bi-question-circle"></i>
-                        <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
+                        <h3>Какие цены на ваши услуги?</h3>
                         <div class="faq-content">
-                            <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit
-                                laoreet
-                                id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est
-                                pellentesque
-                                elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                            </p>
+                            <p>Стоимость наших услуг зависит от типа проекта, его масштаба и требуемых ресурсов. Мы
+                                предлагаем
+                                конкурентоспособные цены и прозрачную систему оплаты, а также можем предложить
+                                индивидуальные
+                                предложения для долгосрочного сотрудничества.</p>
                         </div>
                         <i class="faq-toggle bi bi-chevron-right"></i>
                     </div><!-- End Faq item-->
 
                     <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
                         <i class="faq-icon bi bi-question-circle"></i>
-                        <h3>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h3>
+                        <h3>Как я могу начать сотрудничество с вами?</h3>
                         <div class="faq-content">
-                            <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est
-                                ante in.
-                                Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                                bibendum est.
-                                Purus gravida quis blandit turpis cursus in</p>
+                            <p>Все просто! Свяжитесь с нами через контактную форму на сайте или по телефону, и наши
+                                специалисты
+                                обсудят с вами ваш проект, предложат лучшие решения и подготовят коммерческое
+                                предложение. Мы всегда
+                                рады новым партнерам!</p>
                         </div>
                         <i class="faq-toggle bi bi-chevron-right"></i>
                     </div><!-- End Faq item-->
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 </section><!-- /Faq Section -->
 
 {% endblock %}
