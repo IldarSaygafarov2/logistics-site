@@ -27,3 +27,24 @@ class TrackInfo(models.Model):
         verbose_name="Название страны отправителя", max_length=60
     )
     shop_name = models.CharField(verbose_name="Название магазина", max_length=100)
+    shipment_departure_time = models.DateTimeField(
+        verbose_name="Дата отправки груза",
+        help_text="Дата отправки груза из страны отправителя",
+    )
+    shipment_enter_uzb = models.DateTimeField(
+        verbose_name="Дата прилета", help_text="Дата прилета в страну назначения"
+    )
+    shipment_process_local = models.DateTimeField(
+        verbose_name="Дата принятия на склад",
+        help_text="Когда посылка была принята на склад",
+    )
+    shipment_received_time = models.DateTimeField(
+        verbose_name="Дата доставки", help_text="Дата доставки посылки получателю"
+    )
+
+    def __str__(self):
+        return self.shipment_number
+
+    class Meta:
+        verbose_name = "Данные о грузе"
+        verbose_name_plural = "Данные о грузах"
