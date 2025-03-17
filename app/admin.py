@@ -1,10 +1,10 @@
 from django.contrib import admin
-
+from unfold.admin import ModelAdmin
 from .models import TrackInfo, RequestMessage
 
 
 @admin.register(TrackInfo)
-class TrackInfoAdmin(admin.ModelAdmin):
+class TrackInfoAdmin(ModelAdmin):
     list_display = [
         "shipment_number",
         "shipment_id_create_time",
@@ -33,6 +33,6 @@ class TrackInfoAdmin(admin.ModelAdmin):
 
 
 @admin.register(RequestMessage)
-class RequestMessageAdmin(admin.ModelAdmin):
+class RequestMessageAdmin(ModelAdmin):
     list_display = ["first_name", "email", "subject", "created_at"]
     list_filter = ["created_at"]
