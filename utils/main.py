@@ -32,7 +32,7 @@ def make_request(**kwargs):
     }
     r = requests.post(
         "https://pushservice.egov.uz/v3/app/mq/receive",
-        headers={"Authorization": f"Bearer {token}"},
+        headers={"Authorization": f"Bearer {TOKEN_KEY}"},
         json=params,
     )
     print(r.text)
