@@ -1,8 +1,20 @@
+import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHANNEL_ID = os.getenv("CHANNEL_ID")
+print(CHANNEL_ID)
+TG_API_URL = (
+    "https://api.telegram.org/bot{token}/sendMessage?chat_id={channel_id}&text={text}"
+)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+TOKEN_KEY = os.getenv("TOKEN_KEY")
 
 SECRET_KEY = "django-insecure-8l4@47)=!#&_06vkd5ii$!bgn4xw5+hq)u!ix#*ehs2r5)6@hn"
 
