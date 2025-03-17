@@ -18,7 +18,7 @@ TOKEN_KEY = os.getenv("TOKEN_KEY")
 
 SECRET_KEY = "django-insecure-8l4@47)=!#&_06vkd5ii$!bgn4xw5+hq)u!ix#*ehs2r5)6@hn"
 
-
+print(TOKEN_KEY)
 DEBUG = True
 
 ALLOWED_HOSTS = ["newavialogistic.uz", "127.0.0.1"]
