@@ -57,7 +57,7 @@ class TrackInfo(models.Model):
         return self.shipment_number
 
     def save(self, *args, **kwargs):
-        print(self.country_code)
+
         make_request(
             correlationId=str(self.correlation_id),
             shipmentNumber=self.shipment_number,

@@ -7,7 +7,7 @@ load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL_ID = os.getenv("CHANNEL_ID")
-print(CHANNEL_ID)
+
 TG_API_URL = (
     "https://api.telegram.org/bot{token}/sendMessage?chat_id={channel_id}&text={text}"
 )
@@ -21,7 +21,7 @@ SECRET_KEY = "django-insecure-8l4@47)=!#&_06vkd5ii$!bgn4xw5+hq)u!ix#*ehs2r5)6@hn
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["newavialogistic.uz"]
+ALLOWED_HOSTS = ["newavialogistic.uz", "127.0.0.1"]
 
 CSRF_TRUSTED_ORIGINS = ["https://newavialogistic.uz"]
 
