@@ -57,13 +57,14 @@ class TrackInfo(models.Model):
         return self.shipment_number
 
     def save(self, *args, **kwargs):
+        print(self.country_code)
         make_request(
             correlationId=str(self.correlation_id),
             shipmentNumber=self.shipment_number,
             shipmentIdCreatTime=self.shipment_id_create_time.isoformat(),
             ShipmentOrg=self.shop_name,
             shipmentOrgStir=self.inn,
-            # shipmentCountryCode=self.country_code,
+            shipmentCountryCode=self.country_code,
             shipmentCountry=self.county_name,
             shipmentSendOrg=self.shipment_org_name,
             shipmentDepartureTime=self.shipment_departure_time.isoformat(),
