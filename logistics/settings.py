@@ -21,7 +21,9 @@ SECRET_KEY = "django-insecure-8l4@47)=!#&_06vkd5ii$!bgn4xw5+hq)u!ix#*ehs2r5)6@hn
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["newavialogistic.uz"]
+
+CSRF_TRUSTED_ORIGINS = ["https://newavialogistic.uz"]
 
 
 INSTALLED_APPS = [
