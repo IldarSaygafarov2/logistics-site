@@ -5,3 +5,4 @@ logic/
 *.pem
 test.py
 db.sqlite3
+logs/
