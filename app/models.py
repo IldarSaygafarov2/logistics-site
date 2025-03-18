@@ -9,7 +9,7 @@ COUNTRY_CHOICES = [
 
 
 class TrackInfo(models.Model):
-    correlation_id = models.UUIDField(default=uuid.uuid4())
+    correlation_id = models.UUIDField(default=uuid.uuid4)
     shipment_number = models.CharField(max_length=100, verbose_name="Трек номер")
     shipment_id_create_time = models.DateField(
         verbose_name="Дата формирования заказа",
