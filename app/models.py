@@ -25,7 +25,7 @@ class TrackInfo(models.Model):
         choices=COUNTRY_CHOICES, verbose_name="Код страны", max_length=5
     )
     county_name = models.CharField(
-        verbose_name="Название страны отправителя", max_length=60
+        verbose_name="Название страны отправителя", max_length=60, default="Корея"
     )
     shop_name = models.CharField(verbose_name="Название магазина", max_length=100)
     shipment_departure_time = models.DateField(

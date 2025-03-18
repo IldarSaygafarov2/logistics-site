@@ -29,7 +29,8 @@ class TrackInfoAdmin(ModelAdmin):
         "shipment_process_local",
         "shipment_received_time",
     ]
-    readonly_fields = ["correlation_id"]
+    exclude = ["correlation_id"]
+    # readonly_fields = ["correlation_id"]
 
 
 @admin.register(RequestMessage)
