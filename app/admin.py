@@ -6,6 +6,7 @@ from .models import TrackInfo, RequestMessage
 @admin.register(TrackInfo)
 class TrackInfoAdmin(ModelAdmin):
     list_display = [
+        "correlation_id",
         "shipment_number",
         "shipment_id_create_time",
         "shipment_org_name",
