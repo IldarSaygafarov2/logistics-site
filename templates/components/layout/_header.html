@@ -1,16 +1,18 @@
+{% load static %}
+
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
         <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto">
 
-            <h1 class="sitename">NewAviaLogistic</h1>
+            <img src="{% static 'assets/img/Group.svg' %}" alt="Logo">
         </a>
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="{% url 'home' %}" class="active">Home<br></a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'home' %}" class="active">Главная<br></a></li>
+                <li><a href="{% url 'about' %}">О нас</a></li>
+                <li><a href="{% url 'contact' %}">Контакты</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

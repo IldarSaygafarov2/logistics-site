@@ -1,11 +1,15 @@
 import uuid
 from django.db import models
 from utils.main import read_json, make_request
-
+from enum import StrEnum
 
 COUNTRY_CHOICES = [
     (item["code"], f'{item["name"]}') for item in read_json("countries.json")
 ]
+
+
+class TrackStatus(StrEnum):
+    pass
 
 
 class TrackInfo(models.Model):
