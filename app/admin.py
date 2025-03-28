@@ -22,6 +22,7 @@ class TrackInfoAdmin(ModelAdmin):
         "country_code",
         "shipment_id_create_time",
         "shipment_received_time",
+        'status'
     ]
     list_editable = [
         "country_code",
@@ -31,6 +32,7 @@ class TrackInfoAdmin(ModelAdmin):
         "shipment_received_time",
     ]
     exclude = ["correlation_id"]
+    search_fields = ['shipment_number']
     # readonly_fields = ["correlation_id"]
 
 

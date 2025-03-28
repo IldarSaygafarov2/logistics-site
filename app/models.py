@@ -8,11 +8,18 @@ COUNTRY_CHOICES = [
 ]
 
 
-# class TrackStatus(StrEnum):
-#     pass
+
 
 
 class TrackInfo(models.Model):
+
+    class TrackStatusEnum(models.TextChoices):
+        DELIVERING = 'Доставляется'
+        DELIVERED = 'Доставлено'
+        ON_WAREHOUSE = 'На складе'
+
+        __empty__ = ''
+
     correlation_id = models.UUIDField(default=uuid.uuid4)
     shipment_number = models.CharField(max_length=100, verbose_name="Трек номер")
     shipment_id_create_time = models.DateField(
@@ -56,6 +63,8 @@ class TrackInfo(models.Model):
         null=True,
         blank=True,
     )
+    status = models.CharField(choices=TrackStatusEnum, default=TrackStatusEnum.DELIVERING, max_length=20,
+                              verbose_name='Статус доставки')
 
     def __str__(self):
         return self.shipment_number
