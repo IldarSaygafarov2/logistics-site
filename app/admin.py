@@ -10,7 +10,6 @@ class TrackInfoAdmin(admin.ModelAdmin):
         "shipment_number",
         "shipment_id_create_time",
         "shipment_org_name",
-        "country_code",
         "shop_name",
         "shipment_departure_time",
         "shipment_enter_uzb",
@@ -25,7 +24,6 @@ class TrackInfoAdmin(admin.ModelAdmin):
         "status",
     ]
     list_editable = [
-        "country_code",
         "shipment_departure_time",
         "shipment_enter_uzb",
         "shipment_process_local",
@@ -33,7 +31,7 @@ class TrackInfoAdmin(admin.ModelAdmin):
     ]
     exclude = ["correlation_id"]
     search_fields = ["shipment_number"]
-    # readonly_fields = ["correlation_id"]
+    readonly_fields = ["correlation_id"]
 
 
 @admin.register(RequestMessage)
