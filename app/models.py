@@ -1,6 +1,7 @@
 import uuid
 from django.db import models
 from utils.main import read_json, make_request
+
 # from enum import StrEnum
 
 COUNTRY_CHOICES = [
@@ -8,17 +9,14 @@ COUNTRY_CHOICES = [
 ]
 
 
-
-
-
 class TrackInfo(models.Model):
 
     class TrackStatusEnum(models.TextChoices):
-        DELIVERING = 'Доставляется'
-        DELIVERED = 'Доставлено'
-        ON_WAREHOUSE = 'На складе'
+        DELIVERING = "Доставляется"
+        DELIVERED = "Доставлено"
+        ON_WAREHOUSE = "На складе"
 
-        __empty__ = ''
+        __empty__ = ""
 
     correlation_id = models.UUIDField(default=uuid.uuid4)
     shipment_number = models.CharField(max_length=100, verbose_name="Трек номер")
@@ -63,8 +61,12 @@ class TrackInfo(models.Model):
         null=True,
         blank=True,
     )
-    status = models.CharField(choices=TrackStatusEnum, default=TrackStatusEnum.DELIVERING, max_length=20,
-                              verbose_name='Статус доставки')
+    status = models.CharField(
+        choices=TrackStatusEnum,
+        default=TrackStatusEnum.DELIVERING,
+        max_length=20,
+        verbose_name="Статус доставки",
+    )
 
     def __str__(self):
         return self.shipment_number

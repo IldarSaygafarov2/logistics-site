@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from logistics import settings
 import requests
+from .models import TrackInfo
 from .forms import RequestMessageForm
 
 
@@ -40,3 +41,12 @@ def send_message_to_request(request):
     print(resp.text)
 
     return redirect("contact")
+
+
+def find_by_track_id(request):
+    track_id = request.GET.get("track_id")
+    track_item = TrackInfo.objects.filter(shipment_number=track_id).first()
+    context = {
+        "track_item": track_item,
+    }
+    return render(request, "app/index.html", context)

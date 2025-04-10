@@ -21,9 +21,9 @@
                     минимальными затратами. С нами вы получаете качественное обслуживание и уверенность в результате.
                 </p>
 
-                <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <input type="text" class="form-control" placeholder="Номер отслеживания">
+                <form action="{% url 'find_id' %}" class="form-search d-flex align-items-stretch mb-3"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <input type="text" class="form-control" placeholder="Номер отслеживания" name="track_id">
                     <button type="submit" class="btn btn-primary">Найти</button>
                 </form>
 
@@ -129,8 +129,8 @@
 
             <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up"
                 data-aos-delay="200">
-{#                <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">#}
-{#                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>#}
+                {# <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">#}
+                {# <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>#}
                 <video src="{% static 'assets/video/2025-03-27 15.23.54.mp4' %}" autoplay muted class="w-100"></video>
             </div>
 
@@ -605,4 +605,84 @@
     </div>
 
 </section>
+
+<!-- 
+shipment_id_create_time
+shipment_departure_time
+shipment_enter_uzb
+shipment_process_local
+shipment_received_time
+-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Информация о посылке:
+                    {{ track_item.shipment_number }}
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group">
+                    {% if track_item.shipment_id_create_time %}
+                    <li class="list-group-item">
+                        <span>
+                            Дата формирования заказа: <br>
+                            <b>{{track_item.shipment_id_create_time}}</b>
+                        </span>
+                    </li>
+                    {% endif %}
+                    {% if track_item.shipment_departure_time %}
+                    <li class="list-group-item">
+                        <span>Дата отправки груза: <br>
+                            <b>{{ track_item.shipment_departure_time }}</b>
+                        </span>
+                    </li>
+                    {% endif %}
+                    {% if track_item.shipment_enter_uzb %}
+                    <li class="list-group-item">
+                        <span>
+                            Дата прилета в Узбекистан: <br />
+                            <b>{{ track_item.shipment_enter_uzb }}</b>
+                        </span>
+                    </li>
+                    {% endif %}
+                    {% if track_item.shipment_process_local %}
+                    <li class="list-group-item">
+                        <span>
+                            Дата принятия на склад:
+                            <br> <b>{{ track_item.shipment_process_local }}</b>
+                        </span>
+                    </li>
+                    {% endif %}
+                    {% if track_item.shipment_received_time %}
+                    <li class="list-group-item">
+                        <span>Дата доставки: <br>
+                            <b>{{ track_item.shipment_received_time }}</b>
+                        </span>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block extra_script %}
+{% if track_item %}
+<script>
+
+    var modalPopup = new bootstrap.Modal(document.getElementById("exampleModal"), {
+    });
+    modalPopup.show();
+</script>
+{% endif %}
 {% endblock %}
